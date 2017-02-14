@@ -1,6 +1,7 @@
 .DS_Store
 conaninfo.txt
 conanbuildinfo.cmake
+build/*
 
 # Compiled Object files
 *.slo

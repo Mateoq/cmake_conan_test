@@ -1,10 +1,23 @@
 // main.cpp
-#include "iostream"
+#include <iostream>
+
+// GLM
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <SDL2/SDL.h>
 
 #include "todos.h"
 
 int main() {
   std::cout << "Hello, Welcome to my todos!!" << std::endl;
+
+  if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+    std::cout << "Unable to Init SDL: " << SDL_GetError() << std::endl;
+    return 0;
+  }
+  
+  auto vec = glm::vec3(1.0f);
 
   Todos todos{};
 

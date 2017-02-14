@@ -22,9 +22,15 @@ if (NOT CONFIGURED_ONCE)
   set(CMAKE_CXX_FLAGS "${flags}")
 endif()
 
+# Include Conan dependencies
+include(${CMAKE_SOURCE_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+
 # The following folder will be included
 include_directories("${PROJECT_SOURCE_DIR}")
 
 add_executable(Todos ${PROJECT_SOURCE_DIR}/main.cpp
   ${PROJECT_SOURCE_DIR}/todos.cpp)
+
+target_link_libraries(Todos ${CONAN_LIBS})
 
