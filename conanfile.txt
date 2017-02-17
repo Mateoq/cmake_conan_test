@@ -4,6 +4,7 @@ glfw/3.2.1@R3v3nX/testing
 freeimage/3.17.0@hilborn/stable
 freetype/2.6.3@lasote/stable
 SDL2/2.0.5@lasote/stable
+assimp/3.3.1@lasote/vcpkg
 
 [generators]
 cmake
